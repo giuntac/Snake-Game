@@ -3,6 +3,7 @@
 # Start from creating the snake
 
 from turtle import Screen, Turtle
+Import time 
 
 screen = Screen()
 screen.setup(width=600, height=600)
