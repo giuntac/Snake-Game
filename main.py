@@ -40,6 +40,36 @@ while game_is_on:
     #the pieces will do only a circle 
     
     #we need to think about segments that move in a graph
+
+#3 Control the snake using the up-down-left-right arrow keys.
+
+screen.listen()       
+screen.onkey(‘Up’)
+screen.onkey(‘Down’)
+screen.onkey(‘Left’)
+screen.onkey(‘Right)
+
+
+head = segments[0]
+up = 90
+down = 270
+left = 180
+right = 0 
+
+#Move the head of the snake (segment[0]) by 0,90,180 or 270 degrees.
+
+def up():
+    if head.heading() != down: 
+        head.setheading(up) #if it goes up, it cannot go down
+def down():
+    if head.heading() != up: 
+        head.setheading(down) #if it goes down, it cannot go up 
+def left():
+    if head.heading() != right: 
+        head.setheading(left) #if it goes left, it cannot go right
+def right():
+    if head.heading() != left: 
+        head.setheading(right) #if it goes right, it cannot go left
       
                                   
                                       
