@@ -2,7 +2,9 @@
 
 from turtle import Screen, Turtle
 import time 
-from snake import Snake #importing the class
+
+#After you have created the snake.py class you need to import it in main.py
+from snake import Snake 
 
 screen = Screen()
 screen.setup(width=600, height=600)
