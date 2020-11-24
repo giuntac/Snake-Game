@@ -37,10 +37,10 @@ while game_is_on:
 #3 Control the snake using the up-down-left-right arrow keys.
 
 screen.listen()       
-screen.onkey(‘Up’)
-screen.onkey(‘Down’)
-screen.onkey(‘Left’)
-screen.onkey(‘Right)
+screen.onkey('Up')
+screen.onkey('Down')
+screen.onkey('Left')
+screen.onkey('Right')
 
 
 head = segments[0]
