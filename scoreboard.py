@@ -3,7 +3,7 @@
 
 from turtle import Turtle
 
-Class Scoreboard(Turtle):
+class Scoreboard(Turtle):
 
     def __init__(self):
         super().__init__()
