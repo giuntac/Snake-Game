@@ -12,7 +12,7 @@ class Scoreboard(Turtle):
         self.penup() #remove white arrows
         self.goto(0, 260)
         self.hideturtle() #to remove the arrow
-        self.update_scoreboard
+        self.update_scoreboard()
 	
 	
 
