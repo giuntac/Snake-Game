@@ -43,9 +43,9 @@ while game_is_on:
 
     #Detect collision with tails 
     for segment in snake.segments[1:]: # enhanced this part using slicing 
-	if snake.head.distance(segment) < 10:
+        if snake.head.distance(segment) < 10:
             game_is_on = False
             scoreboard.game_over()
-		
+            
 
 screen.exitonclick() #run it it does not disappear straight away 
