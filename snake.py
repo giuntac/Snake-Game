@@ -1,6 +1,8 @@
 '''This class includes the code for creating, moving, controlling the snake'''
 
+import csv
 from turtle import Screen, Turtle
+from configurator import Configurator
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -9,6 +11,7 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+configurator = Configurator()
 
 class Snake:
 
@@ -24,7 +27,7 @@ class Snake:
 
     def add_segment(self, position):
         new_segment = Turtle("square")
-        new_segment.color("white")
+        new_segment.color(configurator.get_snake_color())
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
