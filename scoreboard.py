@@ -26,3 +26,6 @@ class Scoreboard(Turtle):
         self.score += 1
         self.clear()
         self.update_scoreboard()
+    
+    def get_score(self):
+        return self.score
