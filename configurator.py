@@ -1,66 +1,46 @@
+"""
+This module reads config.csv file and sets the correct parameters.
+
+The game can be personalised by the user and the configurator
+makes it look like the user specified it in the dedicated csv file.
+
+Functions:
+- get_attributes : get background color, snake color, food color and food shape
+    
+"""
+
 import csv
 
-class Configurator():
-    """Reads config.csv file and sets the correct parameters.
+default_filename = 'config.csv'
 
-    The game can be personlized by the user and the confidgurator
-    makes it look like the user specified in the dedicated csv file.
 
-    Functions:
-    - get_background : get background color
-    - get_snake_color : get snake color
-    - get_food_color : get food color
-    - get_food_shape : get food shape
-    
+def get_attributes(filename):
+    """Gets specified attributes (colors and shapes).
+        
+    Returns a list with the specified attributes.
     """
 
-    def __init__(self):
-        self.file = 'config.csv'
+    dict_list = []
 
-    def get_background(self):
-        """Gets specified background color.
-        
-        Returns a string.
-        """
-        with open(self.file) as f:
-            self.csv_reader = csv.reader(f, delimiter=',')
-            next(self.csv_reader)
-            for row in self.csv_reader:
-                self.background_color = str(row[0])
-        return self.background_color
+    try:
+        with open(filename) as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            for row in csv_reader:
+                background_color = row['background']
+                dict_list.append(background_color)
+                snake_color = row['snake']
+                dict_list.append(snake_color)
+                food_color = row['food']
+                dict_list.append(food_color)
+                food_shape = row['shape']
+                dict_list.append(food_shape)
 
-    def get_snake_color(self):
-        """Gets specified snake color.
-        
-        Returns a string.
-        """
-        with open(self.file) as f:
-            self.csv_reader = csv.reader(f, delimiter=',')
-            next(self.csv_reader)
-            for row in self.csv_reader:
-                self.snake_color = str(row[1])
-        return self.snake_color
+        return dict_list
 
-    def get_food_color(self):
-        """Gets specified food color.
-        
-        Returns a string.
-        """
-        with open(self.file) as f:
-            self.csv_reader = csv.reader(f, delimiter=',')
-            next(self.csv_reader)
-            for row in self.csv_reader:
-                self.food_color = str(row[2])
-        return self.food_color
+    except FileNotFoundError:
+        print("File %s not found" % filename)
 
-    def get_food_shape(self):
-        """Gets specified food shape.
-        
-        Returns a string.
-        """
-        with open(self.file) as f:
-            self.csv_reader = csv.reader(f, delimiter=',')
-            next(self.csv_reader)
-            for row in self.csv_reader:
-                self.food_shape = str(row[3])
-        return self.food_shape
+
+if __name__ == "__main__":
+
+    attributes = get_attributes(default_filename)
