@@ -1,13 +1,27 @@
-'''This class incudes the code to read config.csv file and set the correct parameters'''
-
 import csv
 
 class Configurator():
+    """Reads config.csv file and sets the correct parameters.
+
+    The game can be personlized by the user and the confidgurator
+    makes it look like the user specified in the dedicated csv file.
+
+    Functions:
+    - get_background : get background color
+    - get_snake_color : get snake color
+    - get_food_color : get food color
+    - get_food_shape : get food shape
+    
+    """
 
     def __init__(self):
         self.file = 'config.csv'
 
     def get_background(self):
+        """Gets specified background color.
+        
+        Returns a string.
+        """
         with open(self.file) as f:
             self.csv_reader = csv.reader(f, delimiter=',')
             next(self.csv_reader)
@@ -16,6 +30,10 @@ class Configurator():
         return self.background_color
 
     def get_snake_color(self):
+        """Gets specified snake color.
+        
+        Returns a string.
+        """
         with open(self.file) as f:
             self.csv_reader = csv.reader(f, delimiter=',')
             next(self.csv_reader)
@@ -24,6 +42,10 @@ class Configurator():
         return self.snake_color
 
     def get_food_color(self):
+        """Gets specified food color.
+        
+        Returns a string.
+        """
         with open(self.file) as f:
             self.csv_reader = csv.reader(f, delimiter=',')
             next(self.csv_reader)
@@ -32,6 +54,10 @@ class Configurator():
         return self.food_color
 
     def get_food_shape(self):
+        """Gets specified food shape.
+        
+        Returns a string.
+        """
         with open(self.file) as f:
             self.csv_reader = csv.reader(f, delimiter=',')
             next(self.csv_reader)

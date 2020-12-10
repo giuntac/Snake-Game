@@ -1,3 +1,16 @@
+'''
+This module handles access to the database,
+plus additonal functions to use it.
+It allows to check for a user and his/her score,
+look up the maximum score, or retrieve the whole list of
+players with their scores in descending order.
+
+Functions:
+- check_score: looks for a username
+- max_score: retrieves max score
+- print_all_users: prints player list
+
+'''
 import sqlite3
 import argparse
 from colorama import Fore
@@ -17,6 +30,13 @@ def parse_args_optional():
     return parser.parse_args()
 
 def check_score(username):
+    """Checks for a specified username in the database to view his/her score.
+    
+    ----------
+    Parameters
+    ----------
+    username : choose the verbosity level (type: srt)
+    """
     global conn
     global cursor
 
@@ -35,6 +55,8 @@ def check_score(username):
         print(f"Oh no! Seems like {username} hasn't played yet.")
 
 def max_score(): # view max score
+    """Looks for the maximum score in the database.
+    """
     global conn
     global cursor
     
@@ -45,6 +67,8 @@ def max_score(): # view max score
     print("The user with the highest score is", results[0][0], "with", results[0][1], "points.")
 
 def print_all_users(): # Now works showing them in descending order!
+    """Prints all users with respective scores present in the database
+    """
     global conn
     global cursor
     rows = cursor.execute("SELECT username, score FROM user ORDER BY score DESC")

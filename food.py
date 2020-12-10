@@ -1,5 +1,3 @@
-'''This class includes the code for creating the food'''
-
 import csv
 from turtle import Turtle
 import random
@@ -8,6 +6,14 @@ from configurator import Configurator
 configurator = Configurator()
 
 class Food(Turtle):
+    """Controls everything realted to the food.
+
+    Turtle subclass. 
+    
+    Functions:
+    - refresh : creates a new piece of food
+
+    """
 
     def __init__(self):
         super().__init__()
@@ -19,6 +25,12 @@ class Food(Turtle):
         self.refresh()
 
     def refresh(self):
+        """Creates a new random set of coordinates.
+
+        A new piece of food is created at the coordinates 
+        randomly generated here.
+        """
+
         random_x = random.randint(-265, 265)
         random_y = random.randint(-265, 265)
         self.goto(random_x, random_y)
