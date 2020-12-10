@@ -9,12 +9,12 @@ from turtle import Screen
 from food import Food
 from snake import Snake
 from scoreboard import Scoreboard
-from configurator import Configurator
+from configurator import get_attributes
 
-configurator = Configurator()
+attributes = get_attributes('config.csv')
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.bgcolor(configurator.get_background())
+screen.bgcolor(attributes[0])
 screen.title("Snake Game")
 screen.tracer(0)
 

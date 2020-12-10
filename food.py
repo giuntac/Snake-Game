@@ -1,9 +1,9 @@
 import csv
 from turtle import Turtle
 import random
-from configurator import Configurator
+from configurator import get_attributes
 
-configurator = Configurator()
+attributes = get_attributes('config.csv')
 
 class Food(Turtle):
     """Controls everything realted to the food.
@@ -17,10 +17,10 @@ class Food(Turtle):
 
     def __init__(self):
         super().__init__()
-        self.shape(configurator.get_food_shape())
+        self.shape(attributes[3])
         self.penup()
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
-        self.color(configurator.get_food_color())
+        self.color(attributes[2])
         self.speed('fastest')
         self.refresh()
 

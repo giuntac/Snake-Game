@@ -1,6 +1,6 @@
 import csv
 from turtle import Screen, Turtle
-from configurator import Configurator
+from configurator import get_attributes
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -9,7 +9,7 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-configurator = Configurator()
+attributes = get_attributes('config.csv')
 
 class Snake:
     """Controls everything snake-related from appearance to behavior. 
@@ -51,7 +51,7 @@ class Snake:
         position : coordinated at which to add a segment
         """
         new_segment = Turtle("square")
-        new_segment.color(configurator.get_snake_color())
+        new_segment.color(attributes[1])
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
