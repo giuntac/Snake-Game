@@ -5,11 +5,12 @@ from configurator import get_attributes
 
 attributes = get_attributes('config.csv')
 
+
 class Food(Turtle):
     """Controls everything realted to the food.
 
-    Turtle subclass. 
-    
+    Turtle subclass.
+
     Functions:
     - refresh : creates a new piece of food
 
@@ -27,7 +28,7 @@ class Food(Turtle):
     def refresh(self):
         """Creates a new random set of coordinates.
 
-        A new piece of food is created at the coordinates 
+        A new piece of food is created at the coordinates
         randomly generated here.
         """
 
