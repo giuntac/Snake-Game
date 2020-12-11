@@ -1,6 +1,6 @@
-'''
+"""
 This module handles access to the database,
-plus additonal functions to use it.
+plus additional functions to use it.
 It allows to check for a user and his/her score,
 look up the maximum score, or retrieve the whole list of
 players with their scores in descending order.
@@ -10,11 +10,9 @@ Functions:
 - max_score: retrieves max score
 - print_all_users: prints player list
 
-'''
+"""
 import sqlite3
 import argparse
-from colorama import Fore
-from colorama import Style
 
 conn = sqlite3.connect('scoreboard.db')
 cursor = conn.cursor()

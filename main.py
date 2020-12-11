@@ -1,4 +1,4 @@
-'''This is our main working file'''
+"""This is our main working file."""
 
 import time
 import argparse

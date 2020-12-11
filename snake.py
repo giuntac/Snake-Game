@@ -1,5 +1,4 @@
-import csv
-from turtle import Screen, Turtle
+from turtle import Turtle
 from configurator import get_attributes
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
@@ -16,7 +15,7 @@ class Snake:
     """Controls everything snake-related from appearance to behavior.
 
     The functions included are used to create, move
-    and control (with arrowkeys) the snake.
+    and control (with arrow keys) the snake.
     Functions:
     - create_snake : creates snake body
     - add_segment : adds segment to snake body
@@ -38,7 +37,7 @@ class Snake:
         """Creates the snake body on the screen.
 
         Three white squares are drawn on the screen at the chosen
-        starting poistions.
+        starting positions.
         """
         for position in STARTING_POSITIONS:
             # Add a segment to the position we are looping through
@@ -74,7 +73,7 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
 
     def up(self):
-        """Control the snake with arrowkeys.
+        """Control the snake with arrow keys.
 
         If the snake is going up it can't go down.
         """
@@ -82,7 +81,7 @@ class Snake:
             self.head.setheading(UP)
 
     def down(self):
-        """Control the snake with arrowkeys.
+        """Control the snake with arrow keys.
 
         If the snake is going down it can't go up.
         """
@@ -90,7 +89,7 @@ class Snake:
             self.head.setheading(DOWN)
 
     def left(self):
-        """Control the snake with arrowkeys.
+        """Control the snake with arrow keys.
 
         If the snake is going left it can't go right.
         """
@@ -98,7 +97,7 @@ class Snake:
             self.head.setheading(LEFT)
 
     def right(self):
-        """Control the snake with arrowkeys.
+        """Control the snake with arrow keys.
 
         If the snake is going right it can't go left.
         """

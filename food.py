@@ -1,4 +1,3 @@
-import csv
 from turtle import Turtle
 import random
 from configurator import get_attributes
@@ -7,7 +6,7 @@ attributes = get_attributes('config.csv')
 
 
 class Food(Turtle):
-    """Controls everything realted to the food.
+    """Controls everything related to the food.
 
     Turtle subclass.
 

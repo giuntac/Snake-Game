@@ -1,4 +1,4 @@
-'''
+"""
 This module handles access to the database.
 It allows to open or create a database and add new users.
 
@@ -6,7 +6,7 @@ Functions:
 - open_and_create: connects to the database
 - save_new_username: adds new username and score
 
-'''
+"""
 import sqlite3
 
 conn = None
