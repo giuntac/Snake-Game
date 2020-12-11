@@ -6,10 +6,10 @@ import dbmanager as db
 from colorama import Fore
 from colorama import Style
 from turtle import Screen
-from food import Food
-from snake import Snake
-from scoreboard import Scoreboard
-from configurator import get_attributes
+from package_snake.food import Food
+from package_snake.snake import Snake
+from package_snake.scoreboard import Scoreboard
+from package_snake.configurator import get_attributes
 
 attributes = get_attributes('config.csv')
 screen = Screen()
