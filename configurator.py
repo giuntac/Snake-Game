@@ -6,7 +6,7 @@ makes it look like the user specified it in the dedicated csv file.
 
 Functions:
 - get_attributes : get background color, snake color, food color and food shape
-    
+
 """
 
 import csv
@@ -16,7 +16,7 @@ default_filename = 'config.csv'
 
 def get_attributes(filename):
     """Gets specified attributes (colors and shapes).
-        
+
     Returns a list with the specified attributes.
     """
 
