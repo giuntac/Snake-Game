@@ -12,6 +12,7 @@ import sqlite3
 conn = None
 cursor = None
 
+
 def open_and_create():
     """Connects to the database and creates user table.
 
@@ -21,24 +22,25 @@ def open_and_create():
     global cursor
     conn = sqlite3.connect('scoreboard.db')
     cursor = conn.cursor()
-    try: 
+    try:
         cursor.execute("SELECT * FROM user")
-    except sqlite3.OperationalError: 
+    except sqlite3.OperationalError:
         # create table (if necessary)
         cursor.execute('''CREATE TABLE user
                      (username TEXT, score INTEGER,
                       PRIMARY KEY (username))''')
 
-def save_new_username(username, score): 
+
+def save_new_username(username, score):
     """Save a new username with his/her score in the user table.
-    
+
     ----------
     Parameters
     ----------
     username : the username typed by the player (type: str)
     score : the player's final score after game over (type: int)
     """
-    global conn  
+    global conn
     global cursor
     # adding username and value scored
     cursor.execute("INSERT OR REPLACE INTO user VALUES (?,?)",
