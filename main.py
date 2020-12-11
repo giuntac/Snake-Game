@@ -60,12 +60,14 @@ while game_is_on:
 
 screen.exitonclick()  # Making the screen to not disappear straight away
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', help='add a username name', required=False)
     args = parser.parse_args()
     return args
-    
+
+
 if __name__ == "__main__":
     args = parse_args()
     # open the connection and (if necessary) create the users table:
@@ -73,13 +75,16 @@ if __name__ == "__main__":
 
     if not args.u:
         # the username is missing
-        print ("Your score cannot be saved. Please enter your username after -u .")
+        print("Your score cannot be saved.\
+                Please enter your username after -u.")
     elif args.u and scoreboard.get_score() != 0:
         # add username and score to scoreboard.db
         db.save_new_username(args.u, scoreboard.get_score())
         print(f"Well done {args.u}!",
-        f"Your score is: {Fore.GREEN}{scoreboard.get_score()}{Style.RESET_ALL}!")
-        # the player scored zero
+              f"Your score is: {Fore.GREEN}\
+              {scoreboard.get_score()}{Style.RESET_ALL}!")
+        # the player scored zero
     else:
-        print(f"Ouch {Fore.MAGENTA}{args.u}{Style.RESET_ALL}! This is the lowest possible score!\n", 
-        "Score at least 1 to be classified among other players.")
+        print(f"Ouch {Fore.MAGENTA}{args.u}{Style.RESET_ALL}!\
+              This is the lowest possible score!\n",
+              "Score at least 1 to be classified among other players.")
