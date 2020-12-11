@@ -11,11 +11,12 @@ RIGHT = 0
 
 attributes = get_attributes('config.csv')
 
+
 class Snake:
-    """Controls everything snake-related from appearance to behavior. 
-    
-    The functions included are used to create, move 
-    and control (with arrowkeys) the snake. 
+    """Controls everything snake-related from appearance to behavior.
+
+    The functions included are used to create, move
+    and control (with arrowkeys) the snake.
     Functions:
     - create_snake : creates snake body
     - add_segment : adds segment to snake body
@@ -35,7 +36,7 @@ class Snake:
 
     def create_snake(self):
         """Creates the snake body on the screen.
-        
+
         Three white squares are drawn on the screen at the chosen
         starting poistions.
         """
@@ -58,7 +59,7 @@ class Snake:
 
     def extend(self):
         """Extends the snake body with a new segment.
-        
+
         The new segment is added to the position of the last segment
         """
         self.add_segment(self.segments[-1].position())
@@ -74,7 +75,7 @@ class Snake:
 
     def up(self):
         """Control the snake with arrowkeys.
-        
+
         If the snake is going up it can't go down.
         """
         if self.head.heading() != DOWN:
@@ -82,7 +83,7 @@ class Snake:
 
     def down(self):
         """Control the snake with arrowkeys.
-        
+
         If the snake is going down it can't go up.
         """
         if self.head.heading() != UP:
@@ -90,7 +91,7 @@ class Snake:
 
     def left(self):
         """Control the snake with arrowkeys.
-        
+
         If the snake is going left it can't go right.
         """
         if self.head.heading() != RIGHT:
@@ -98,7 +99,7 @@ class Snake:
 
     def right(self):
         """Control the snake with arrowkeys.
-        
+
         If the snake is going right it can't go left.
         """
         if self.head.heading() != LEFT:
