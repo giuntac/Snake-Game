@@ -2,7 +2,7 @@
 This module reads config.csv file and sets the correct parameters.
 
 The game can be personalised by the user and the configurator
-makes it look like the user specified it in the dedicated csv file.
+fetches information the user gave via terminal.
 
 Functions:
 - get_attributes : get background color, snake color, food color and food shape

@@ -1,5 +1,3 @@
-"""This is our main working file."""
-
 import argparse
 import time
 from turtle import Screen
@@ -34,6 +32,15 @@ screen.onkey(snake.right, "Right")
 
 
 def parse_args():
+    """Parses the parameters inserted in the command line.
+    ----------
+    Parameters
+    ----------
+    -u : specify a username to play with
+    -c : check for a user's score
+    -m : look for max score
+    - l : list all users and scores
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', help='add a username name', required=False)
     parser.add_argument('-c', help="check for a username and return the score",
@@ -47,6 +54,10 @@ def parse_args():
     return args
 
 def main():
+    """This function handles the arguments given by 
+    the user and accordingly launches the right respective 
+    functions inside external modules to play. 
+    """
     args = parse_args()
     exit = False
     # Checking optional arguments. If selected, show scores
