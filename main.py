@@ -53,10 +53,11 @@ def parse_args():
     args = parser.parse_args()
     return args
 
+
 def main():
-    """This function handles the arguments given by 
-    the user and accordingly launches the right respective 
-    functions inside external modules to play. 
+    """This function handles the arguments given by
+    the user and accordingly launches the right respective
+    functions inside external modules to play.
     """
     args = parse_args()
     exit = False

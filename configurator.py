@@ -44,7 +44,8 @@ def get_attributes(filename):
 if __name__ == "__main__":
     attributes = get_attributes(default_filename)
     edit = input(
-        "You just launched the configuration script. Do you want to change the configuration parameters? (y/N) ")
+        "You just launched the configuration script.\
+             Do you want to change the configuration parameters? (y/N) ")
     if edit.upper() in ["YES", "Y"]:
         background_color = input(f"Background color: [{attributes[0]}] ")
         snake_color = input(f"Snake color: [{attributes[1]}] ")
@@ -55,7 +56,8 @@ if __name__ == "__main__":
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerow({'background': background_color,
-                             'snake': snake_color, 'food': food_color, 'shape': food_shape})
+                             'snake': snake_color, 'food': food_color,
+                             'shape': food_shape})
 
     # Checking again the modifications with another query
     attributes = get_attributes(default_filename)
