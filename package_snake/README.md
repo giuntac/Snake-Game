@@ -33,10 +33,10 @@ These two possibilities are possible thanks to the following commands:
 ## How to Change Usability Features 💻
 If you want to change the usability features you have to execute `$ python configurator.py`. 
 After that you will be asked to choose between:
-1. y (yes) you will be able to change background color, snake color, food color, and food shape;
-2. N (no) you will exit from this command. 
+1. `y` (yes) you will be able to change background color, snake color, food color, and food shape;
+2. `N` (no) you will exit from this command. 
 
-Accordingly with your choices you can now start `$ python main.py -u playername` with the new features (if you chose y), on the other hand you will play wuth default features.
+Accordingly with your choices you can now start `$ python main.py -u playername` with the new features (if you chose y), on the other hand you will play with default features.
 
 ## Testing ❌ ✅
 Tests of the configurator.py file are here: package_name/tests/ .
