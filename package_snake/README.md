@@ -41,5 +41,4 @@ Accordingly with your choices you can now start `$ python main.py -u playername`
 ## Testing ❌ ✅
 Tests of the configurator.py file are here: package_name/tests/ .
 You will find one module test_configurator.py .
-To run them from the main folder use: python3 -m unittest2 -v -b package_snake/tests/test_configurator.py .
-
+To run them from the main folder use: `python3 -m unittest2 -v -b package_snake/tests/test_configurator.py` .
