@@ -65,7 +65,6 @@ def max_score():  # view max score
     max_score = cursor.execute("SELECT username, MAX(score) FROM user")
     conn.commit()
     results = max_score.fetchall()
-    # print(results)
     print("The user with the highest score is",
           results[0][0], "with", results[0][1], "points.")
 
@@ -79,20 +78,7 @@ def print_all_users():  # print all users
                           score FROM user ORDER BY score DESC")
     conn.commit()
     results = rows.fetchall()
-    # print(results)
 
     print("Here is the leaderboard:")
     for row in results:
         print(row[0], row[1])
-
-
-args = parse_args_optional()
-
-if args.c:
-    check_score(args.c)
-elif args.m:
-    max_score()
-elif args.l:
-    print_all_users()
-
-conn.close()

@@ -1,6 +1,6 @@
 import unittest2
 import os
-from configurator import get_attributes
+from package_snake.configurator import get_attributes
 
 
 class TestConfigurator(unittest2.TestCase):
