@@ -4,7 +4,7 @@ Feeling nostalgic for retro games? No worries, in this repository you will find 
 
 If you run the program, executing the main file with: `$ python main.py -u playername` a window with a small cubic segment moving around appears on your screen, and that's your time to play! 
 
-#Add image 
+![](snake_game.gif)
 
 > Note: the project requires the following modules to run: Turtle, argparse, sqlite3, 
 
