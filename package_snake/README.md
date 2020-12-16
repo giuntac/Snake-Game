@@ -28,7 +28,7 @@ These two options are possible thanks to the following commands:
 2. **Optional arguments**
    * `-c`: checks for the username and returns the score 
    * `-m`: returns max score 
-   * `-u`: prints all users and their related scores
+   * `-l`: prints all users and their related scores
 
 ## How to Change Usability Features ⚙️
 If you want to change the usability features (background color, snake color, food color, food shape) you have to execute `$ python configurator.py`. 
@@ -39,7 +39,7 @@ After that, you will be asked to choose between:
 Accordingly with your choices you can now start playing by typing `$ python main.py -u playername` with the new features (if you chose y), on the other hand you will play with default features.
 
 ## Testing ✅
-Tests of the `configurator.py` file are here: package_name/tests/ .
+Tests of the `configurator.py` file are here: `package_name/tests/` .
 You will find one module `test_configurator.py`.
 To run them from the main folder use: `python -m unittest2 -v -b package_snake/tests/test_configurator.py` .
 
