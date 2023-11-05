@@ -6,11 +6,20 @@ If you run the program, executing the main file with: `$ python main.py -u playe
 
 ![](snake_game.gif)
 
-> Note: the project requires the following modules to run: Turtle, argparse, sqlite3, unittest2, colorama, random, os, csv.
+> Note: the project requires the following modules to run: `turtle`, `argparse`, `sqlite3`, `unittest2`, `colorama`, `random`, `os`, `csv`.
 
 You can use the arrow keys of your computer keyboard to move the snake around and try to eat the pieces of food in its path so it can grow in length. For each piece of food the snake eats, an additional point is added to your score but as in the real game, every time the snake collides with the walls of the window or its own tail, then it's GAME OVER 👾❌ 
 
 Don't worry though, you can play as many times as you want and your score will be saved together with your competitors' ones, so you can always check your ranking and try to beat their score! We have also provided you with the possibility to personalise your game, choosing the colour of the background or the snake, and even the shape of the food, but don't worry I will explain everything step by step!
+
+## Installation
+To use `Snake Game`, you need Python 3.x and `pip`. Clone the repository and install the required packages:
+
+```
+git clone https://github.com/giuntac/Snake-Game.git
+cd Snake-Game
+pip install -r requirements.txt
+```
 
 ## Command Line Parameters 💻
 As previously explained in the introduction, some commands are required in order to run our main script.
